@@ -14,7 +14,6 @@ function Box(x, y, w, h) {
     rotate(angle);
     rectMode(CENTER);
     
-    strokeWeight(1);
     stroke(255);
     fill(127);
 

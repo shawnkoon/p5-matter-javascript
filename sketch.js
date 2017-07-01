@@ -17,8 +17,7 @@ function setup() {
     isStatic: true,
   };
 
-  ground = Bodies.rectangle(200, height, width, 10, options);
-  World.add(world, ground);
+  ground = new ground(200, height, width, 10, options);
 }
 
 function draw() {
@@ -26,12 +25,9 @@ function draw() {
   for (var i = 0; i < boxes.length; i++) {
     boxes[i].show();
   }
-  fill(255);
-  strokeWeight(4);
-  line(0, height, width, height);
+  ground.show();
 }
 
-function mouseDragged() {
+function mouseClicked() {
   boxes.push(new Box(mouseX, mouseY, 20, 20));
-
 }
